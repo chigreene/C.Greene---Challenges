@@ -51,7 +51,7 @@ p {
     font-size: 16px;
 }
 
-/* The image needs css properties to maintain the same functionality as when it was a background image */
+/* The image needs css properties to maintain the same functionality as when it was a background image. this block of code accomplishes that*/
 .hero {
     display: block;
     height: 800px;
@@ -74,7 +74,27 @@ p {
     display: inline-block;
     margin-left: 20px;
 }
+/* This use to be multiple separate classes with different class selectors for each. By changing them to have the same class selector in the html I was able to reduce the code for these sections to one block of code. */
+/* the content section of code was not consolidated in the document so I moved it so its grouped together in the css and appears in the same order it appears in the html */
+.main-content {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
 
+/* these six classes were able to be combined by into two blocks of code by using the same class selector instead of individual selectors.*/
+.main-content img {
+    max-height: 200px;
+}
+
+.main-content h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+/* this section of code needs to come after the .content section of code so it reflects the order in the html */
 .benefits {
     margin-right: 20px;
     padding: 20px;
@@ -103,26 +123,6 @@ p {
     max-width: 150px;
 }
 
-/* This use to be multiple separate classes with different class selectors for each. By changing them to have the same class selector in the html I was able to reduce the code for these sections to one block of code. */
-
-.main-content {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-/* these six classes were able to be combined by into two blocks of code by using the same class selector instead of individual selectors.*/
-.main-content img {
-    max-height: 200px;
-}
-
-.main-content h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
 
 .footer {
     padding: 30px;
