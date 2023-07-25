@@ -1,21 +1,24 @@
+<!-- Declaring the type of document we are writing; HTML5. Declaring the language we are writing in -->
 <!DOCTYPE html>
 <html lang="en-us">
-
+<!-- head of the document which contains the title to the page, links to CSS style sheets, and meta data -->
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- the browser window needed to be modified with to adjust the view port default to be scale of 1 and to fit the screen size of the device being viewed on -->
+    <!-- the browser window needed to be modified to adjust the view port default to be scale of 1 and to fit the screen size of the device being viewed on -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Added an appropriate homepage title -->
     <title>Horiseon - Homepage</title>
 </head>
-
+<!-- Body of the document. This is what will be displayed on the screen. It is broken into three sections. Header, main and footer -->
 <body>
     <!-- this block of code is more accurately represented by a header character -->
     <header class="header">
+        <!-- h1 is the semantic used the the main title on the page. Line span is being used to stylize the name of the Company -->
         <h1>Hori<span class="seo">seo</span>n</h1>
-        <!-- since this block of code is navigation links a nav character is more appropriate than a div -->
+        <!-- This is the Navigation section of the page. Initially it was blocked off using divs. There is better semantic elements to used so the divs were replaced with appropriate semantic elements.-->
         <nav>
+            <!-- An unordered list is used to align the navigation links. Anchor tags are used to embed the link to the corresponding section on the page -->
             <ul>
                 <li>
                     <a href="#search-engine-optimization">Search Engine Optimization</a>
@@ -29,21 +32,24 @@
             </ul>
         </nav>
     </header>
-    <!-- An image that provides important information to the page should not be a back ground image. It is not accommodating of accessibility of the page. So the image was placed in a figure element with image element having a class of hero-->
-    <!-- a main element is missing but with the presence of a header and footer a main element needs to be here so i added a main opening and closing tags-->
+    <!-- An image that provides important information to the page should not be a background image. It is not accommodating of accessibility of the page. So the image was placed in a figure element with image element having a class of hero-->
+    <!-- a main element is missing and with the presence of a header and footer and the amount of content between the header and footer a main element needs to be here so i added a main opening and closing tags-->
     <main>
-        <!-- figure element containing the image and alt attribute and a class to allow css styling -->
+        <!-- figure element containing the image and alt attribute and a class to allow css styling src links the element, alt provided information for accessability and if the image doesnt load. It is assigned the class of hero so CSS styling modify the image-->
         <figure>
             <img src="./assets/images/digital-marketing-meeting.jpg" alt="Team digital-marketing-meeting" class="hero">
         </figure>
-        <!-- The content section has be better represented as a section instead of a div -->
+        <!-- The content section originally had div tags. It is better to use section tags to indicate that this is a section of content. -->
         <section class="content">
+            <!-- classes are used to link to the style sheet and create and eloquent look for the page -->
             <!-- these sub sections of the main content are better represented by section characters instead of div characters -->
-            <!-- id attribute was added so the link in the nave section would direct viewers to the correct link -->
+            <!-- id attribute was added so the link in the nav section would direct viewers to the correct link -->
             <!-- by creating the same class for these three sections I was able to reduce the amount of associated css code by more than half. -->
+            <!-- The id sections are used to allow the navigation bar to link to these sections in the page -->
             <section id="search-engine-optimization" class="main-content">
                 <!-- an alt attribute was added -->
                 <img src="./assets/images/search-engine-optimization.jpg" class="float-left" alt="Search Engine Optimization plans"/>
+                <!-- the h2 header indicates this section is 2nd in order of importance on the page -->
                 <h2>Search Engine Optimization</h2>
                 <p>
                     The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business.
@@ -66,10 +72,12 @@
                 </p>
             </section>
         </section>
-        <!-- the benifits section is better represented as by a section character than a div character -->
+        <!-- the benefits section is better represented as by a section character than a div character.  -->
         <section class="benefits">
+            <!-- the class attribute is used to allow the containers created by the section elements to be styled more eloquently -->
             <!-- the sub sections of the benefits section are better represented by section characters instead of div characters -->
             <section class="main-benefits">
+                <!-- the h3 heading indicates this is section is third in order of importance on the page.  -->
                 <h3>Lead Generation</h3>
                 <!-- alt attribute was added -->
                 <img src="./assets/images/lead-generation.png" alt="lead generation graphic"/>
@@ -97,7 +105,7 @@
     </main>
     <!-- this div is actually the footer of the page so it is better represented by a footer character -->
     <footer class="footer">
-        <!-- and h4 character makes more sense with the flow of the document -->
+        <!-- and h4 character makes more sense with the flow of the document and indicates this section is 4th in importance on the page-->
         <h4>Made with ❤️️ by Horiseon</h4>
         <p>
             &copy; 2019 Horiseon Social Solution Services, Inc.

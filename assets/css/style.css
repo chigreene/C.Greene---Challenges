@@ -1,30 +1,32 @@
+/* this is the universal selection and sets the way container size is measured to include the boarder. It also seems to be serving a reset and setting padding and margin to 0 */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
+/* establishes the background color for the whole document */
 body {
     background-color: #d9dcd6;
 }
-
+/* specifically stylizes the header by use of the class selector. The padding, font, background color, and text color are all changed. */
 .header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
     color: #ffffff;
 }
-
+/* this is a title and sets the navigation bar to be on the same line and sets the size of the font*/
 .header h1 {
     display: inline-block;
     font-size: 48px;
 }
-
+/* creates a unique look for the company Name */
 .header h1 .seo {
     color: #d9dcd6;
 }
 
-/* because we changed the div tag to a nav tag these changes must be represented in the css */
+/* this sets the padding and margins, floats the container to the right so its inline with the company name, sets font family and font size */
+/* because we changed the div tag to a nav tag these changes must be represented in the css by changing the selectors to the correct name */
 .header nav {
     padding-top: 15px;
     margin-right: 20px;
@@ -32,41 +34,31 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
-
+/* removes the bullet points from the list items */
 .header nav ul {
     list-style-type: none;
 }
-
+/* Allows the list items to be inline horizontally; also applies a margin */
 .header nav ul li {
     display: inline-block;
     margin-left: 25px;
 }
-
+/* adjusts the colors of the links and removes the underline from the links */
 a {
     color: #ffffff;
     text-decoration: none;
 }
-
+/* adjust fond size of the paragraph text */
 p {
     font-size: 16px;
 }
 
+/* displays the image on its own line with a set size so it adjusts to span the entire with of the view window if the size of the window is changed*/
 /* The image needs css properties to maintain the same functionality as when it was a background image. this block of code accomplishes that*/
 .hero {
     display: block;
-    height: 800px;
-    /* width: auto;
-    margin: 0 auto; */
-}
-
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
+    width: 100vw;
+    
 }
 
 .content {
@@ -75,7 +67,7 @@ p {
     margin-left: 20px;
 }
 /* This use to be multiple separate classes with different class selectors for each. By changing them to have the same class selector in the html I was able to reduce the code for these sections to one block of code. */
-/* the content section of code was not consolidated in the document so I moved it so its grouped together in the css and appears in the same order it appears in the html */
+/* the content section of css code was not consolidated in the document so I moved it so its grouped together in the css and appears in the same order it appears in the html */
 .main-content {
     margin-bottom: 20px;
     padding: 50px;
@@ -94,11 +86,26 @@ p {
     margin-bottom: 20px;
     font-size: 36px;
 }
+
+/* these css rules dictate what side of the section container the images appear in */
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+/* these css rules dictate what side of the section container the images appear in */
+.float-right {
+    float: right;
+    margin-left: 25px;
+}
+
+
 /* this section of code needs to come after the .content section of code so it reflects the order in the html */
+/* This code styles the benefits section of the document. It floats it the right which allows it to sit next to the .content section.  */
 .benefits {
     margin-right: 20px;
     padding: 20px;
-    clear: both;
+    /* this line of code is unnecessary since two floating boxes are not adjacent to one another */
+    /* clear: both; */
     float: right;
     width: 20%;
     height: 100%;
@@ -111,26 +118,26 @@ p {
     margin-bottom: 32px;
     color: #ffffff;
 }
-
+/* this css rule stylizes the text alignment and margin */
 .main-benefits h3 {
     margin-bottom: 10px;
     text-align: center;
 }
-
+/* THis css rule stylizes the image to display on its own line and have a set size */
 .main-benefits img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-
+/* the block has a padding set and uses the clear property to ensure that the floating benefits section never shares horizontal space with it. The font is also stylized*/
 .footer {
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
-
-.footer h2 {
+/* this line sets the size of the font and the h2 element was changed to an h4 to reflect the change in the html */
+.footer h4 {
     font-size: 20px;
 }
